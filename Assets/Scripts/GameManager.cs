@@ -63,9 +63,22 @@ public class GameManager : MonoBehaviour {
 		if(sleep < 0){
 			sleep = 0;
 		}
+		if (hunger > 1) {
+			hunger = 1;
+		}
+		if (thirst > 1) {
+			thirst = 1;
+		}
+		if (sleep > 1) {
+			sleep = 1;
+		}
 		
 		hungerBar.percentageFull = hunger;
 		thirstBar.percentageFull = thirst;
 		sleepBar.percentageFull = sleep;
+	}
+
+	public void Feed(float amount){
+		hunger += amount;
 	}
 }
