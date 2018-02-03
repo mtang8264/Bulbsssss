@@ -6,6 +6,6 @@ public class FeedButton : MonoBehaviour {
 	public GameManager gameManager;
 
 	void OnMouseDown(){
-		gameManager.Feed(0.1f);
+		gameManager.Feed(0.01f);
 	}
 }
