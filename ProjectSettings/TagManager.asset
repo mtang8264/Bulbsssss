@@ -7,6 +7,8 @@ TagManager:
   - Bulb
   - Start
   - End
+  - BulbIndex
+  - GameManager
   layers:
   - Default
   - TransparentFX

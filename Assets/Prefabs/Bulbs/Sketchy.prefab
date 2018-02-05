@@ -100,6 +100,11 @@ MonoBehaviour:
   - 16 oz. Steak
   - Corn on the Cob
   - Kale Chips
+  gameManager: {fileID: 0}
+  feedTime: 0
+  testTime: 0
+  food: {fileID: 1801349535649624, guid: 25f22a8ea0951ce4bbaa5b47558f35c4, type: 2}
+  water: {fileID: 1579517958711160, guid: e96dee45336ffd54481f86ffd1736e98, type: 2}
 --- !u!212 &212386097969389824
 SpriteRenderer:
   m_ObjectHideFlags: 1

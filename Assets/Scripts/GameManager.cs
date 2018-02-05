@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 	Bulb bulb;
 	Text nameText;
+	Text genderText;
+	Text levelText;
 	
 	int checkTime = 1;
 	float hunger;
@@ -16,6 +18,11 @@ public class GameManager : MonoBehaviour {
 	StatBar thirstBar;
 	StatBar sleepBar;
 	bool tick = true;
+	public bool feed = false;
+	public bool drink = false;
+	
+	BulbIndex bulbIndex;
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -28,11 +35,16 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Assign missing variables
+		if(bulbIndex == null){
+			bulbIndex = GameObject.FindWithTag("BulbIndex").GetComponent<BulbIndex>();
+		}
 		if(bulb == null){
 			bulb = GameObject.FindWithTag("Bulb").GetComponent<Bulb>();
 		}
 		if(nameText == null){
 			nameText = GameObject.Find("UIName").GetComponent<Text>();
+			genderText = GameObject.Find ("UIGender").GetComponent<Text> ();
+			levelText = GameObject.Find ("UILevel").GetComponent<Text> ();
 		}
 		if(hungerBar == null){
 			hungerBar = GameObject.Find("StatScreen/HungerBar").GetComponent<StatBar>();
@@ -42,6 +54,8 @@ public class GameManager : MonoBehaviour {
 		
 		//Actual Updated function stuff
 		nameText.text = bulb.bulbName;
+		genderText.text = bulb.gender;
+		levelText.text = "" + bulb.magic;
 		
 		if((int)Time.time % checkTime == 0){
 			if(tick){
@@ -80,5 +94,8 @@ public class GameManager : MonoBehaviour {
 
 	public void Feed(float amount){
 		hunger += amount;
+	}
+	public void Drink(float amount){
+		thirst += amount;
 	}
 }

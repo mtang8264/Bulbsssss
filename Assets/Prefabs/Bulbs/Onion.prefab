@@ -74,7 +74,7 @@ MonoBehaviour:
   bulbName: Onion
   gender: Nonbinary
   hunger: 2
-  thirst: 4
+  thirst: 7
   sleep: 3
   magic: 1
   likes:
@@ -85,6 +85,11 @@ MonoBehaviour:
   - Candy Corn
   - Ice Cream
   - Double Decker Pizza
+  gameManager: {fileID: 0}
+  feedTime: 0
+  testTime: 0
+  food: {fileID: 1801349535649624, guid: 25f22a8ea0951ce4bbaa5b47558f35c4, type: 2}
+  water: {fileID: 1579517958711160, guid: e96dee45336ffd54481f86ffd1736e98, type: 2}
 --- !u!114 &114443062596040232
 MonoBehaviour:
   m_ObjectHideFlags: 1
